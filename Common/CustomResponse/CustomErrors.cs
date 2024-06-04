@@ -26,5 +26,17 @@ namespace OTPService.Common
             Status = false,
             Data = data
         };
+
+        public static Result HttpRequestFailed(HttpResponseMessage data) => new()
+        {
+            Message = new Message()
+            {
+                Fa = "خطا هنگام ارسال درخواست",
+                En = "Send Http Request Failed!"
+            },
+            Data = data,
+            StatusCode = (int)data.StatusCode,
+            Status = false
+        };      
     }
 }

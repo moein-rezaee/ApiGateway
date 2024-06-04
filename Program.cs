@@ -15,6 +15,8 @@ internal class Program
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
+        builder.Services.AddHttpClient();
+        
         using ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
         {
             builder.AddSimpleConsole(i => i.ColorBehavior = LoggerColorBehavior.Disabled);

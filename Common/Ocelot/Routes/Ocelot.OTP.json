@@ -1,15 +1,43 @@
 {
     "Routes": [
         {
-            "DownstreamPathTemplate": "/Send",
+            "DownstreamPathTemplate": "/SendCode/{mobile}",
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "otp",
+                    "Host": "localhost",
                     "Port": 5254
                 }
             ],
-            "UpstreamPathTemplate": "/api/otp/v1/send",
+            "UpstreamPathTemplate": "/api/user/v1/send-code/{mobile}",
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/VerifyCode/{code}",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5254
+                }
+            ],
+            "UpstreamPathTemplate": "/api/otp/v1/verify-code",
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Verify",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5209
+                }
+            ],
+            "UpstreamPathTemplate": "/api/user/v1/verify-code",
             "UpstreamHttpMethod": [
                 "Post"
             ]
