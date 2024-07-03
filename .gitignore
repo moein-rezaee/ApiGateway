@@ -2,4 +2,4 @@ bin
 obj
 *.sln
 .vscode
-.sh
+sync.sh
