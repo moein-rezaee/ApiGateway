@@ -3,3 +3,4 @@ obj
 *.sln
 .vscode
 sync.sh
+sync.bat
