@@ -58,6 +58,6 @@
         }
     ],
     "GlobalConfiguration": {
-        "BaseUrl": "http://authenticate:5227"
+        "BaseUrl": "http://localhost:5227"
     }
 }
