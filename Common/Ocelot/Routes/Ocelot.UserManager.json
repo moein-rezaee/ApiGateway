@@ -1,15 +1,29 @@
 {
     "Routes": [
         {
-            "DownstreamPathTemplate": "/Send",
+            "DownstreamPathTemplate": "/Register",
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "user-manager",
+                    "Host": "localhost",
                     "Port": 5209
                 }
             ],
-            "UpstreamPathTemplate": "/api/user-manager/v1/send",
+            "UpstreamPathTemplate": "/api/user-manager/v1/register",
+            "UpstreamHttpMethod": [
+                "Post"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Login",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5209
+                }
+            ],
+            "UpstreamPathTemplate": "/api/user-manager/v1/login",
             "UpstreamHttpMethod": [
                 "Post"
             ]
@@ -19,7 +33,7 @@
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "user-manager",
+                    "Host": "localhost",
                     "Port": 5209
                 }
             ],
@@ -30,6 +44,6 @@
         }
     ],
     "GlobalConfiguration": {
-        "BaseUrl": "http://user-manager:5227"
+        "BaseUrl": "http://localhost:5209"
     }
 }

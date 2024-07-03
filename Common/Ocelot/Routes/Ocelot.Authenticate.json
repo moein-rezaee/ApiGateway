@@ -5,7 +5,7 @@
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "authenticate",
+                    "Host": "localhost",
                     "Port": 5280
                 }
             ],
@@ -19,7 +19,7 @@
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "authenticate",
+                    "Host": "localhost",
                     "Port": 5280
                 }
             ],
@@ -33,7 +33,7 @@
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "authenticate",
+                    "Host": "localhost",
                     "Port": 5280
                 }
             ],
@@ -47,7 +47,7 @@
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "authenticate",
+                    "Host": "localhost",
                     "Port": 5280
                 }
             ],
@@ -58,6 +58,6 @@
         }
     ],
     "GlobalConfiguration": {
-        "BaseUrl": "http://authenticate:5227"
+        "BaseUrl": "http://localhost:5280"
     }
 }

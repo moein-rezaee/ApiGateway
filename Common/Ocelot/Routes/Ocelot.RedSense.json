@@ -1,0 +1,385 @@
+{
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/Device/All/Branch/{branchId}",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/device/all/branch/{branchId}",
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Device/{id}",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/device/{id}",
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Device/{id}",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/device/{id}",
+            "UpstreamHttpMethod": [
+                "Delete"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Device",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/device",
+            "UpstreamHttpMethod": [
+                "Post"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Device",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/device",
+            "UpstreamHttpMethod": [
+                "Put"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Device",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/device",
+            "UpstreamHttpMethod": [
+                "Patch"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Sensor/All/Device/{deviceId}",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/sensor/all/device/{deviceId}",
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Sensor/All/Branch/{branchId}",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/sensor/all/branch/{branchId}",
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Sensor/{id}",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/sensor/{id}",
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Sensor/{id}",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/sensor/{id}",
+            "UpstreamHttpMethod": [
+                "Delete"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Sensor",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/sensor",
+            "UpstreamHttpMethod": [
+                "Post"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Sensor",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/sensor",
+            "UpstreamHttpMethod": [
+                "Put"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Sensor",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/sensor",
+            "UpstreamHttpMethod": [
+                "Patch"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/SensorGroup/All/Branch/{branchId}",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/sensor-group/all/branch/{branchId}",
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/SensorGroup/{id}",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/sensor-group/{id}",
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/SensorGroup/{id}",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/sensor-group/{id}",
+            "UpstreamHttpMethod": [
+                "Delete"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/SensorGroup",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/sensor-group",
+            "UpstreamHttpMethod": [
+                "Post"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/SensorGroup",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/sensor-group",
+            "UpstreamHttpMethod": [
+                "Put"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Log_IR/All/Branch/{branchId}",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/log-ir/all/branch/{branchId}",
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Log_IR/{id}",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/log-ir/{id}",
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Log_IR",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/log-ir",
+            "UpstreamHttpMethod": [
+                "Post"
+            ]
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "http://localhost:5068"
+    }
+}
