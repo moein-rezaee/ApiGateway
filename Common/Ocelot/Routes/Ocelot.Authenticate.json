@@ -27,62 +27,6 @@
             "UpstreamHttpMethod": [
                 "Get"
             ]
-        },
-        {
-            "DownstreamPathTemplate": "/Organization",
-            "DownstreamSchema": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "authenticate",
-                    "Port": 5280
-                }
-            ],
-            "UpstreamPathTemplate": "/api/authenticate/v1/organization",
-            "UpstreamHttpMethod": [
-                "Post"
-            ]
-        },
-        {
-            "DownstreamPathTemplate": "/Organization/Name/{id}/{name}",
-            "DownstreamSchema": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "authenticate",
-                    "Port": 5280
-                }
-            ],
-            "UpstreamPathTemplate": "/api/authenticate/v1/organization/name/{id}/{name}",
-            "UpstreamHttpMethod": [
-                "Patch"
-            ]
-        },
-        {
-            "DownstreamPathTemplate": "/add",
-            "DownstreamSchema": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "authenticate",
-                    "Port": 5280
-                }
-            ],
-            "UpstreamPathTemplate": "/api/authenticate/v1/user/add",
-            "UpstreamHttpMethod": [
-                "Post"
-            ]
-        },
-        {
-            "DownstreamPathTemplate": "/GenerateToken",
-            "DownstreamSchema": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "authenticate",
-                    "Port": 5280
-                }
-            ],
-            "UpstreamPathTemplate": "/api/authenticate/v1/user/generate-token",
-            "UpstreamHttpMethod": [
-                "Post"
-            ]
         }
     ],
     "GlobalConfiguration": {
