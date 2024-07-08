@@ -5,7 +5,7 @@
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "localhost",
+                    "Host": "authenticate",
                     "Port": 5280
                 }
             ],
@@ -19,7 +19,7 @@
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "localhost",
+                    "Host": "authenticate",
                     "Port": 5280
                 }
             ],
@@ -33,7 +33,7 @@
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "localhost",
+                    "Host": "authenticate",
                     "Port": 5280
                 }
             ],
@@ -47,7 +47,7 @@
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "localhost",
+                    "Host": "authenticate",
                     "Port": 5280
                 }
             ],
@@ -55,9 +55,37 @@
             "UpstreamHttpMethod": [
                 "Patch"
             ]
+        },
+        {
+            "DownstreamPathTemplate": "/add",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "authenticate",
+                    "Port": 5280
+                }
+            ],
+            "UpstreamPathTemplate": "/api/authenticate/v1/user/add",
+            "UpstreamHttpMethod": [
+                "Post"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/GenerateToken",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "authenticate",
+                    "Port": 5280
+                }
+            ],
+            "UpstreamPathTemplate": "/api/authenticate/v1/user/generate-token",
+            "UpstreamHttpMethod": [
+                "Post"
+            ]
         }
     ],
     "GlobalConfiguration": {
-        "BaseUrl": "http://localhost:5280"
+        "BaseUrl": "http://authenticate:5280"
     }
 }
