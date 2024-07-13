@@ -325,7 +325,7 @@
             ]
         },
         {
-            "DownstreamPathTemplate": "/Log_IR/All/Branch/{branchId}",
+            "DownstreamPathTemplate": "/Log_IR/All",
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -337,7 +337,25 @@
                 "AuthenticationProviderKey" : "Bearer",
                 "AllowedScopes": []
             },
-            "UpstreamPathTemplate": "/api/redsense/v1/log-ir/all/branch/{branchId}",
+            "UpstreamPathTemplate": "/api/redsense/v1/log-ir/all",
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Log_IR/All/Compare",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "redsense",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/log-ir/all/compare",
             "UpstreamHttpMethod": [
                 "Get"
             ]
@@ -376,6 +394,42 @@
             "UpstreamPathTemplate": "/api/redsense/v1/log-ir",
             "UpstreamHttpMethod": [
                 "Post"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Dashboard/All/Count",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "redsense",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/dashboard/all/count",
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Dashboard/All/Branch",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "redsense",
+                    "Port": 5068
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/redsense/v1/dashboard/all/branch",
+            "UpstreamHttpMethod": [
+                "Get"
             ]
         }
     ],
