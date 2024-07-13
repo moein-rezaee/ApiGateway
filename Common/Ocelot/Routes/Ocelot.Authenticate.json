@@ -5,7 +5,7 @@
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "localhost",
+                    "Host": "authenticate",
                     "Port": 5280
                 }
             ],
@@ -19,7 +19,7 @@
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "localhost",
+                    "Host": "authenticate",
                     "Port": 5280
                 }
             ],
@@ -27,37 +27,9 @@
             "UpstreamHttpMethod": [
                 "Get"
             ]
-        },
-        {
-            "DownstreamPathTemplate": "/Organization",
-            "DownstreamSchema": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "localhost",
-                    "Port": 5280
-                }
-            ],
-            "UpstreamPathTemplate": "/api/authenticate/v1/organization",
-            "UpstreamHttpMethod": [
-                "Post"
-            ]
-        },
-        {
-            "DownstreamPathTemplate": "/Organization/Name/{id}/{name}",
-            "DownstreamSchema": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "localhost",
-                    "Port": 5280
-                }
-            ],
-            "UpstreamPathTemplate": "/api/authenticate/v1/organization/name/{id}/{name}",
-            "UpstreamHttpMethod": [
-                "Patch"
-            ]
         }
     ],
     "GlobalConfiguration": {
-        "BaseUrl": "http://localhost:5280"
+        "BaseUrl": "http://authenticate:5280"
     }
 }
