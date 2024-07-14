@@ -1,7 +1,7 @@
 {
     "Routes": [
         {
-            "DownstreamPathTemplate": "/Branch/All",
+            "DownstreamPathTemplate": "/Branch/All/{userId}",
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -13,10 +13,10 @@
                 "AuthenticationProviderKey" : "Bearer",
                 "AllowedScopes": []
             },
-            "AddQueriesToRequest": {
-                "userId": "Claims[userId]"
-            },
             "UpstreamPathTemplate": "/api/accounting/v1/branch/all",
+            "ChangeDownstreamPathTemplate": {
+                "userId": "Claims[userId] > value > |"
+            },
             "UpstreamHttpMethod": [
                 "Get"
             ]
