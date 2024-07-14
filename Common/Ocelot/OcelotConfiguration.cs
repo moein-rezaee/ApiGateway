@@ -1,3 +1,4 @@
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using CustomResponce.Models;
 using Ocelot.Errors;
@@ -31,6 +32,25 @@ namespace ApiGateway.Common.Ocelot
                 },
                 AuthorizationMiddleware = async (context, next) =>
                 {
+                    string? token = context.Request.Headers.Authorization.FirstOrDefault()?.Split(" ").Last();
+                    if (token != null)
+                    {
+                        JwtSecurityTokenHandler handler = new();
+                        JwtSecurityToken jwtToken = handler.ReadJwtToken(token);
+                        string? userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "userId")?.Value;
+                        string? roleIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "roleId")?.Value;
+                        string? organizationIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "organizationId")?.Value;
+
+                        if (userIdClaim != null)
+                            context.Items["userId"] = userIdClaim;
+
+                        if (roleIdClaim != null)
+                            context.Items["roleId"] = roleIdClaim;
+
+                        if (organizationIdClaim != null)
+                            context.Items["organizationId"] = organizationIdClaim;
+                    }
+
                     // string? token = context.Request.Headers["Token"];
 
                     // if (token != null)
