@@ -1,7 +1,7 @@
 {
     "Routes": [
         {
-            "DownstreamPathTemplate": "/Branch/All/{userId}",
+            "DownstreamPathTemplate": "/Branch/All",
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -13,7 +13,10 @@
                 "AuthenticationProviderKey" : "Bearer",
                 "AllowedScopes": []
             },
-            "UpstreamPathTemplate": "/api/accounting/v1/branch/all/{userId}",
+            "AddHeadersToRequest": {
+                "userId": "Claims[userId]"
+            },
+            "UpstreamPathTemplate": "/api/accounting/v1/branch/all",
             "UpstreamHttpMethod": [
                 "Get"
             ]
@@ -70,6 +73,78 @@
             "UpstreamPathTemplate": "/api/accounting/v1/branch",
             "UpstreamHttpMethod": [
                 "Patch"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Location/All",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "accounting",
+                    "Port": 5150
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/accounting/v1/location/all",
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Location/{id}",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "accounting",
+                    "Port": 5150
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/accounting/v1/location/{id}",
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Location",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "accounting",
+                    "Port": 5150
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/accounting/v1/location",
+            "UpstreamHttpMethod": [
+                "Post"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/Location",
+            "DownstreamSchema": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "accounting",
+                    "Port": 5150
+                }
+            ],
+            "AuthenticationOptions":{
+                "AuthenticationProviderKey" : "Bearer",
+                "AllowedScopes": []
+            },
+            "UpstreamPathTemplate": "/api/accounting/v1/location",
+            "UpstreamHttpMethod": [
+                "Put"
             ]
         }
     ],
