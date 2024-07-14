@@ -1,5 +1,11 @@
 using System.IdentityModel.Tokens.Jwt;
+<<<<<<< HEAD
 using Microsoft.IdentityModel.Tokens;
+=======
+using System.Security.Claims;
+using CustomResponce.Models;
+using Ocelot.Errors;
+>>>>>>> b04a80f980d7b4acd248f91f06fde1e1a51ffdad
 using Ocelot.Middleware;
 
 namespace ApiGateway.Common.Ocelot
@@ -32,20 +38,20 @@ namespace ApiGateway.Common.Ocelot
                     string? token = context.Request.Headers.Authorization.FirstOrDefault()?.Split(" ").Last();
                     if (token != null)
                     {
-                        JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
+                        JwtSecurityTokenHandler handler = new();
                         JwtSecurityToken jwtToken = handler.ReadJwtToken(token);
                         string? userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "userId")?.Value;
-                        string? userRoleIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "userRoleId")?.Value;
-                        string? userOrganizationIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "userOrganizationId")?.Value;
+                        string? roleIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "roleId")?.Value;
+                        string? organizationIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "organizationId")?.Value;
 
-                        if (!userIdClaim.IsNullOrEmpty())
+                        if (userIdClaim != null)
                             context.Items["userId"] = userIdClaim;
 
-                        if (!userRoleIdClaim.IsNullOrEmpty())
-                            context.Items["userRoleId"] = userRoleIdClaim;
+                        if (roleIdClaim != null)
+                            context.Items["roleId"] = roleIdClaim;
 
-                        if (!userOrganizationIdClaim.IsNullOrEmpty())
-                            context.Items["userOrganizationId"] = userOrganizationIdClaim;
+                        if (organizationIdClaim != null)
+                            context.Items["organizationId"] = organizationIdClaim;
                     }
 
                     // string? token = context.Request.Headers["Token"];

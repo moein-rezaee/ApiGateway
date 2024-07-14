@@ -397,7 +397,7 @@
             ]
         },
         {
-            "DownstreamPathTemplate": "/Dashboard/All/Count",
+            "DownstreamPathTemplate": "/Dashboard/All/Count/{userId}",
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -413,12 +413,15 @@
                 "userId": "Claims[userId]"
             },
             "UpstreamPathTemplate": "/api/redsense/v1/dashboard/all/count",
+            "ChangeDownstreamPathTemplate": {
+                "userId": "Claims[userId] > value > |"
+            },
             "UpstreamHttpMethod": [
                 "Get"
             ]
         },
         {
-            "DownstreamPathTemplate": "/Dashboard/All/Branch",
+            "DownstreamPathTemplate": "/Dashboard/All/Branch/{userId}",
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -434,6 +437,9 @@
                 "userId": "Claims[userId]"
             },
             "UpstreamPathTemplate": "/api/redsense/v1/dashboard/all/branch",
+            "ChangeDownstreamPathTemplate": {
+                "userId": "Claims[userId] > value > |"
+            },
             "UpstreamHttpMethod": [
                 "Get"
             ]

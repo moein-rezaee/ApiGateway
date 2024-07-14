@@ -13,10 +13,10 @@
                 "AuthenticationProviderKey" : "Bearer",
                 "AllowedScopes": []
             },
-            "AddHeadersToRequest": {
-                "userId": "Claims[userId]"
-            },
             "UpstreamPathTemplate": "/api/accounting/v1/branch/all",
+            "ChangeDownstreamPathTemplate": {
+                "userId": "Claims[userId] > value > |"
+            },
             "UpstreamHttpMethod": [
                 "Get"
             ]
