@@ -409,6 +409,9 @@
                 "AuthenticationProviderKey" : "Bearer",
                 "AllowedScopes": []
             },
+            "AddHeadersToRequest": {
+                "userId": "Claims[userId]"
+            },
             "UpstreamPathTemplate": "/api/redsense/v1/dashboard/all/count",
             "UpstreamHttpMethod": [
                 "Get"
@@ -426,6 +429,9 @@
             "AuthenticationOptions":{
                 "AuthenticationProviderKey" : "Bearer",
                 "AllowedScopes": []
+            },
+            "AddHeadersToRequest": {
+                "userId": "Claims[userId]"
             },
             "UpstreamPathTemplate": "/api/redsense/v1/dashboard/all/branch",
             "UpstreamHttpMethod": [
