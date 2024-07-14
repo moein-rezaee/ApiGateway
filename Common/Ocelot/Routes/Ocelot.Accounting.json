@@ -1,7 +1,7 @@
 {
     "Routes": [
         {
-            "DownstreamPathTemplate": "/Branch/All",
+            "DownstreamPathTemplate": "/Branch/All/{userId}",
             "DownstreamSchema": "http",
             "DownstreamHostAndPorts": [
                 {
